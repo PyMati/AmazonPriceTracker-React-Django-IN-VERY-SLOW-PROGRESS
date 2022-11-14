@@ -1,11 +1,12 @@
-Hi!
+#Hi!
 
-The main purpose of this repository is keeping code for my future web-service :D.
+##The main purpose of this repository is keeping code for my future web-service :D.
 
-I want to make my scripts transparent and understandable for everybody :D.
+##I want to make my scripts transparent and understandable for everybody :D.
 
-What you can find here?
+##What you can find here?
 
+#Scripts
 main.py - Administration module which is ,,decision" script. Here are conducted the most important actions.
 worker.py - You have to understand this script as employee who live 24/7 and check amazon price every 1 hour (For you everything my dear.).
 worker_creator.py - Here some functionalities to make code more ,,reusable" - something like that. Just module, which creates our workers.
