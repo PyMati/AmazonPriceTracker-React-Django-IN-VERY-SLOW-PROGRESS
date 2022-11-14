@@ -1,9 +1,7 @@
 # Hi!
 
 ## The main purpose of this repository is keeping code for my future web-service :D.
-
 ## I want to make my scripts transparent and understandable for everybody :D.
-
 ## What you can find here?
 
 # Scripts
