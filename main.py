@@ -1,8 +1,7 @@
 """Administrator module"""
-import workercreator
-import reader
+import worker_creator
+import file_reader
 
-data = reader.read_csv("None.csv")
-wrk_list = workercreator.create_workers(data, "csv")
-for worker in wrk_list:
-    worker.check_price()
+data = file_reader.read_csv("None.csv")
+wrk = worker_creator.create_workers(file_reader.read_json("D:\ProgramingALL\AmazonPriceTracker\ Phone1.json"), "json")
+print(wrk.check_price())

@@ -18,13 +18,13 @@ class Observer:
     def save_to_json(self):
         """Function that allows save our workers to json file and then reuse them again."""
         data_to_save = json.dumps({
-            "Url": self.url,
-            "Demand price": self.demand_price,
-            "Item name": self.item_name
+            "URL": self.url,
+            "PRICE": self.demand_price,
+            "NAME": self.item_name
         })
         with open(f"{self.item_name}.json", "w", encoding="utf-8") as file:
             file.write(data_to_save)
 
     def check_price(self):
         """Function that checks if price fullfill our demands."""
-        journalist.get_price(self.url)
+        return journalist.get_price(self.url)

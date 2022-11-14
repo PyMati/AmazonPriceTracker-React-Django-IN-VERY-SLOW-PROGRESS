@@ -7,7 +7,7 @@ def create_workers(data, mode):
     """Function that creates worker list and return it as objects in list."""
     observator = worker.Observer
     if mode == "json":
-        pass
+        return observator(data["URL"], data["PRICE"], data["NAME"])
     elif mode == "csv":
         data_map = map(lambda x: x, data)
         data_list = list(data_map)
