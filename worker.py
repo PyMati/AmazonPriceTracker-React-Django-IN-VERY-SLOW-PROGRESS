@@ -4,6 +4,7 @@ Implementation and logic of python workers.
 import json
 import journalist
 
+
 class Observer:
     """Class which creates our worker."""
 
