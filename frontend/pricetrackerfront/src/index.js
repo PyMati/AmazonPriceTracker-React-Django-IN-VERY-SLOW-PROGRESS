@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.css"
+import Button from './buttons.js';
+import Text from "./text.js"
+import Image from './images.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+class App extends React.Component{
+    render(){
+        return(
+            <div>
+                <Button index = {0}/>
+                <Button index = {1}/>
+                <Button index = {2}/>
+                <Text index = {0}/>
+                <Text index = {1}/>
+                <Text index = {2}/>
+                <Image index = {0}/>
+                <Image index = {1}/>
+                <Image index = {2}/>
+            </div>
+        )
+    }
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App/>);
