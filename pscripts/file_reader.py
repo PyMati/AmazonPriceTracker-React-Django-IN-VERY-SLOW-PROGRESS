@@ -9,7 +9,6 @@ def read_json(filepath):
     with open(filepath, "r+", encoding="utf-8") as json_file:
         return json.load(json_file)
 
-
 def read_csv(filepath):
     """Function that reads csv file.
     Structure of the file:
