@@ -1,10 +1,15 @@
-"""Module which is used in order to obtain multiple workers from json or csv files"""
+"""
+    Module which is used in order to obtain multiple workers
+    from json or csv files.
+"""
 import logging
 import worker
 
 
 def create_workers(data, mode):
-    """Function that creates worker list and return it as objects in list."""
+    """
+    Function that creates worker list and return it as objects in list.
+    """
     observator = worker.Observer
     if mode == "json":
         return observator(data["URL"], data["PRICE"], data["NAME"])

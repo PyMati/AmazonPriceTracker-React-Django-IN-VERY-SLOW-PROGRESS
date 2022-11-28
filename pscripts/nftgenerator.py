@@ -9,7 +9,7 @@ SIZE = (300, 300)
 COLOR = (255, 127, 80)
 FONT = font = ImageFont.truetype("arial.ttf", 14)
 FOLDER_PATH = ("", "Nft's", "")
-# os.system("pycodestyle --first nftgenerator.py")
+
 class NFT:
     """
         Class object which keeps all functionality connected to creating,
@@ -26,25 +26,35 @@ class NFT:
         # self._delete()
 
     def _generate_nft(self):
-        """Generates procedural image."""
+        """
+        Generates procedural image.
+        """
         img = get_random_image(SIZE)
         matplotlib.image.imsave(self.path, img)
 
     def _watermark(self):
-        """Adds watermark to image."""
+        """
+        Adds watermark to image.
+        """
         img = Image.open(self.path)
         writer = ImageDraw.Draw(img)
         writer.text((25, 25), "AmazonWebPriceTracker", font=FONT, fill=COLOR)
         img.save(self.path)
 
     def _add_id_to_db(self):
-        """Add user's image ID to database."""
+        """
+        Add user's image ID to database.
+        """
         pass
 
     def _mint(self):
-        """Mints image for wallet"""
+        """
+        Mints image for wallet.
+        """
         pass
 
     def _delete(self):
-        """Deletes file from server directory."""
+        """
+        Deletes file from server directory.
+        """
         os.remove(self.path)
