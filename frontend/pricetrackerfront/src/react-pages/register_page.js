@@ -10,7 +10,7 @@ export default class RegisterPage extends React.Component{
     }
     render(){
         return(
-            <div></div>
+            <div>
                 <Navbar />
                 <RegisterForm />
                 <Footer />

@@ -1,6 +1,7 @@
 import React from "react";
-import LoginForm from "./login_form";
-import Footer from "./footer";
+import LoginForm from "../forms/login_form.js";
+import Footer from "../base/footer.js";
+import Navbar from "../base/navbar.js";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class LoginPage extends React.Component{
@@ -10,6 +11,7 @@ export default class LoginPage extends React.Component{
     render(){
         return(
             <div>
+                <Navbar />
                 <LoginForm />
                 <Footer />
             </div>

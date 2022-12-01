@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
-import "./index.css"
+import "../index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class LoginForm extends React.Component{
+export default class RegisterForm extends React.Component{
     constructor(props){
         super(props);
         this.state = {

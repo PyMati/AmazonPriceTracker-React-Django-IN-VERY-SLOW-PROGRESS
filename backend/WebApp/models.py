@@ -1,16 +1,10 @@
 from django.db import models
 
-user_id = 0
-
-def increase_id(id):
-    return user_id + 1
-
 # Create your models here.
 class User(models.Model):
     username = models.CharField(max_length=50)
     email = models.EmailField(max_length=254)
     password = models.CharField(max_length=50)
-    id = increase_id(user_id)
 
 
 class Admin_User(models.Model):
