@@ -6,17 +6,16 @@ from WebApp.serializers import User_Serializer, Admin_Serializer, Worker_Data_Se
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+import json
 
 # Admin website.
 def index(request):
     template = loader.get_template("./index.html")
-    
-    ls = []
-    for n in range(11):
-        ls.append(1)
+    dataset = User.objects.all()
     context = {
-        "ln": ls
+        "users": dataset
     }
+    
     return HttpResponse(template.render(context, request))
 
 # Api configuration.
@@ -38,10 +37,9 @@ class WorkersViewSet(viewsets.ModelViewSet):
 def saveUser(request):
     serializer = User_Serializer(data = request.data)
     if serializer.is_valid():
-        serializer.save()
-        
-    return Response(serializer.data)
+        new_user = User.objects.aget_or_create(serializer)
+    return Response(User.objects.all())
 
 @api_view(["GET"])
 def showUsers(request):
-    return Response(UserViewSet.queryset.all())
+    return Response(User.objects.all())
