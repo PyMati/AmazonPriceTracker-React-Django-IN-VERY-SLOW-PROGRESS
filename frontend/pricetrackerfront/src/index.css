@@ -1,5 +1,12 @@
 body{
     background-color: #D6E4E5;
+    font-family: "Indie flower", sans-serif;
+}
+
+/* Font settings */
+@font-face{
+    font-family: "Indie flower";
+    src: url("./fonts/IndieFlower-Regular.ttf");
 }
 
 .center{
